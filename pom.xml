@@ -12,6 +12,7 @@
     <modules>
         <module>jsf-demo-server</module>
         <module>jsf-demo-client</module>
+        <module>designPatterns</module>
     </modules>
     <properties>
         <!-- common -->
@@ -29,7 +30,7 @@
         <!-- Build args -->
         <updateReleaseInfo>true</updateReleaseInfo>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-        <jdk.version>1.6</jdk.version>
+        <jdk.version>1.8</jdk.version>
         <!-- <maven.test.skip>true</maven.test.skip> -->
     </properties>
 
@@ -38,7 +39,7 @@
             <dependency>
                 <groupId>com.jd</groupId>
                 <artifactId>jsf</artifactId>
-                <version>1.5.5</version>
+                <version>1.7.4-HOTFIX-T4</version>
             </dependency>
 
             <dependency>
