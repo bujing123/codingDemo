@@ -288,7 +288,7 @@
       <div class="proj-module">
         <div class="proj-module-item">
           <span class="mtitle">主导Agent整体技术方案选型与架构设计</span>
-          <div class="bg"><b class="label">背景：</b>面向本地生活营销活动"定/招/投/控/盘"全链路AI化，对比纯提示词驱动、低代码编排引擎、LangGraph、自研框架等5种方案，综合Java生态兼容性、HITL支持能力、团队落地成本，最终选定基于Spring AI自建Agent Harness，按入口层/智能决策层/行动层/治理层四层拆分能力边界；单场活动人工操作耗时从22步/126.3小时压缩至分钟级对话。</div>
+          <div class="bg"><b class="label">背景：</b>面向本地生活营销活动"定/招/投/控/盘"全链路AI化，对比纯提示词驱动、低代码编排引擎、LangGraph、自研框架等5种方案，综合Java生态兼容性、HITL支持能力、团队落地成本，最终选定基于Spring AI自建Agent Harness，按入口层/智能决策层/行动层/治理层四层拆分能力边界；单场活动操作步长从6步压缩至最低2步、操作时长从27小时压缩至10分钟，AI召回率98.19%、AI准确率82.21%。</div>
           <div class="tech"><b class="label">相关技术：</b>Spring AI、单体Agent+工具化子能力架构、意图识别与上下文管理</div>
         </div>
         <div class="proj-module-item">
@@ -298,7 +298,7 @@
         </div>
         <div class="proj-module-item">
           <span class="mtitle">设计高危写操作全链路资损防控体系</span>
-          <div class="bg"><b class="label">背景：</b>Agent具备活动创建、发券、改库存等高危写能力，存在跨系统越权、关键参数误写、脏数据重复落库三类资损风险。建立"权限拦截+预演执行+数据兜底"三层防护：Skill/Tool双层权限校验、基于Agent中断机制实现"预演确认-恢复执行"的HITL交互（中断现场写Redis、生成interruptId绑定KIM确认卡片、读后即删防重复创建、用户会话级CacheLock防状态错乱）、字段级与行级幂等校验兜底。</div>
+          <div class="bg"><b class="label">背景：</b>Agent具备活动创建、发券、改库存等高危写能力，存在跨系统越权、关键参数误写、脏数据重复落库三类资损风险。建立"工具授权+预演模式+数据兜底"三层防护：Skill/Tool双层权限校验、基于Agent中断机制与Checkpoint快照实现"预演确认-恢复执行"的HITL交互（中断现场写Redis Hash生成interruptId绑定KIM确认卡片、读后即删防重复创建、用户会话级CacheLock防状态错乱）、字段级与行级幂等校验兜底。</div>
           <div class="tech"><b class="label">相关技术：</b>Agent中断与Checkpoint恢复、Redis、KIM卡片交互、幂等设计</div>
         </div>
         <div class="proj-module-item">
