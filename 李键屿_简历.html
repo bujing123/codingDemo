@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简历 - 李键屿</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    background: #eef1f5;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 50px;
+    color: #333;
+  }
+
+  .resume {
+    width: 794px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* ===== 顶部深蓝头部 ===== */
+  .header {
+    background: linear-gradient(135deg, #1c3d5e 0%, #15304c 100%);
+    padding: 26px 32px;
+    color: #fff;
+  }
+
+  .header .name {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 6px;
+  }
+
+  .header .meta-line {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #cfe0f0;
+    letter-spacing: 0.5px;
+  }
+
+  .header .meta-line .sep { margin: 0 8px; color: #6f93b5; }
+
+  .header .status-line {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #a9d2f5;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .header .status-line .sep { margin: 0 8px; color: #6f93b5; }
+
+  /* ===== 正文 ===== */
+  .body { padding: 4px 32px 26px; }
+
+  /* ===== 章节标题 ===== */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 10px;
+  }
+
+  .section-title .bar {
+    width: 5px;
+    height: 17px;
+    background: #2c5f8e;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .section-title h2 {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #15304c;
+    letter-spacing: 2px;
+  }
+
+  /* ===== 教育经历 ===== */
+  .edu-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    font-size: 13.5px;
+  }
+
+  .edu-row .school { font-weight: 700; color: #222; }
+  .edu-row .tags { display: inline-flex; gap: 6px; }
+  .edu-row .tag {
+    font-size: 11px;
+    color: #2c5f8e;
+    border: 1px solid #a9c6e0;
+    border-radius: 3px;
+    padding: 0 5px;
+  }
+  .edu-row .date { margin-left: auto; color: #888; flex-shrink: 0; }
+
+  .edu-sub {
+    font-size: 13px;
+    color: #555;
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .course {
+    font-size: 12.5px;
+    color: #888;
+    margin-top: 5px;
+  }
+
+  /* ===== 专业技能 ===== */
+  .skill-list { list-style: none; counter-reset: skill; }
+  .skill-list li {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.75;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 3px;
+  }
+  .skill-list li::before {
+    content: counter(skill) '、';
+    counter-increment: skill;
+    position: absolute;
+    left: 0;
+    color: #2c5f8e;
+    font-weight: 700;
+  }
+  .skill-list.new-skill li::before { color: #c97a2e; }
+  .skill-tag-new {
+    display: inline-block;
+    font-size: 10.5px;
+    color: #c97a2e;
+    border: 1px solid #e3b483;
+    border-radius: 3px;
+    padding: 0 4px;
+    margin-left: 4px;
+    transform: translateY(-1px);
+  }
+
+  /* ===== 工作经历 ===== */
+  .job-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 13.5px;
+    margin-bottom: 2px;
+  }
+  .job-row .company { font-weight: 700; color: #222; font-size: 14px; }
+  .job-row .dept { color: #666; margin-left: 10px; font-size: 12.5px; }
+  .job-row .date { color: #888; }
+  .job-loc { font-size: 12px; color: #999; margin-bottom: 8px; }
+
+  /* ===== 项目经历 ===== */
+  .proj-block { margin-bottom: 16px; }
+
+  .proj-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #15304c;
+    background: #eef4fa;
+    border-left: 3px solid #2c5f8e;
+    padding: 6px 10px;
+    border-radius: 0 3px 3px 0;
+    margin-bottom: 5px;
+  }
+
+  .proj-meta {
+    font-size: 12.5px;
+    color: #555;
+    line-height: 1.9;
+    padding-left: 2px;
+  }
+  .proj-meta b { color: #333; font-weight: 700; }
+
+  .proj-module {
+    margin-top: 4px;
+    counter-reset: module;
+  }
+  .proj-module-item {
+    font-size: 13px;
+    color: #333;
+    margin-top: 8px;
+    padding-left: 2px;
+  }
+  .proj-module-item .mtitle {
+    font-weight: 700;
+    color: #1c3d5e;
+  }
+  .proj-module-item .mtitle::before {
+    content: counter(module) '、';
+    counter-increment: module;
+    color: #2c5f8e;
+  }
+  .proj-module-item .bg {
+    font-size: 12.5px;
+    color: #555;
+    line-height: 1.75;
+    margin-top: 2px;
+  }
+  .proj-module-item .bg b.label { color: #2c5f8e; font-weight: 700; }
+  .proj-module-item .tech {
+    font-size: 12.5px;
+    color: #555;
+    margin-top: 2px;
+  }
+  .proj-module-item .tech b.label { color: #2c5f8e; font-weight: 700; }
+
+  /* ===== 技能证书及其他 ===== */
+  .other-item { font-size: 13px; color: #444; line-height: 1.9; margin-bottom: 2px; }
+  .other-item b.label { color: #15304c; font-weight: 700; margin-right: 4px; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .resume { box-shadow: none; width: 100%; }
+    .proj-block { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="resume">
+
+  <!-- 顶部头部 -->
+  <div class="header">
+    <div class="name">李 键 屿</div>
+    <div class="meta-line">18990025231<span class="sep">丨</span>1370717030@qq.com<span class="sep">丨</span>北京</div>
+    <div class="status-line">在职<span class="sep">丨</span>北京<span class="sep">丨</span>Java / AI Agent<span class="sep">丨</span>30k-40k</div>
+  </div>
+
+  <div class="body">
+
+    <!-- 教育经历 -->
+    <div class="section-title"><div class="bar"></div><h2>教育经历</h2></div>
+    <div class="edu-row">
+      <span class="school">北京邮电大学</span>
+      <span class="tags"><span class="tag">双一流</span><span class="tag">211</span></span>
+      <span class="date">2017年09月 - 2021年06月</span>
+    </div>
+    <div class="edu-sub">
+      <span>信息与通信工程 本科 信息与通信学院</span>
+      <span>北京</span>
+    </div>
+    <div class="course">主修课程：c++开发、java开发、计算机网络、通信原理等</div>
+
+    <!-- 专业技能 -->
+    <div class="section-title"><div class="bar"></div><h2>专业技能</h2></div>
+    <ol class="skill-list">
+      <li>熟悉JVM，包括内存模型、回收机制，有过多次JVM调优经历；</li>
+      <li>熟悉掌握mysql，包括索引，事务，锁等机制，有Mysql调优、分库分表设计经验；</li>
+      <li>熟悉使用Redis非关系型数据库，redis使用常见，熟悉多级缓存架构，比如：缓存穿透、击穿、雪崩、双写一致、缓存失效等；</li>
+      <li>熟悉Spring，SpringMVC，SpringBoot，Mybatis等JAVA开发技术；</li>
+      <li>熟悉使用MQ消息中间件，比如：应用解耦、异步增效、流量削峰；</li>
+      <li>灵活运用混合设计模式解决实际业务问题，比如：工厂、模板方法、策略、责任链模式等；</li>
+      <li>熟悉使用和深入理解Java并发相关技术，比如：线程池、AQS、CountDownLatch、Future等。</li>
+    </ol>
+    <ol class="skill-list new-skill" style="counter-reset: skill 7;">
+      <li>熟悉基于Spring AI构建Agent工程化能力<span class="skill-tag-new">快手新增</span>，包括Agent Harness分层设计（入口层/智能决策层/行动层/治理层）、大工具结果"精简+外部化"双层上下文卸载、主子Agent拆分与上下文隔离、基于中断恢复机制的人工介入（HITL）等；</li>
+      <li>熟悉大模型SFT/CoT/DPO训练全流程<span class="skill-tag-new">快手新增</span>，具备训练数据配比设计、标注规范制定、"模型预生成+人工审核修正"降本标注方案、模型选型论证（SFT微调 vs MLP分类头）等审核类多模态/文本大模型调优经验；</li>
+      <li>熟悉多媒体内容理解相关工程能力<span class="skill-tag-new">快手新增</span>，包括OCR/ASR统一接入、抽帧策略by队列路由、责任链模式的数据源可插拔设计（Provider Chain）、kconf动态配置灰度等。</li>
+    </ol>
+
+    <!-- 工作经历 -->
+    <div class="section-title"><div class="bar"></div><h2>工作经历</h2></div>
+
+    <div class="job-row"><span class="company">快手科技<span class="dept">本地生活技术部</span></span><span class="date">2024年09月 - 至今</span></div>
+    <div class="job-loc">后端开发工程师　｜　北京　｜　2026年3月内部晋升一次</div>
+
+    <div class="job-row"><span class="company">京东<span class="dept">技术与数据智能部</span></span><span class="date">2021年06月 - 2024年09月</span></div>
+    <div class="job-loc">后端开发工程师　｜　北京</div>
+
+    <!-- 项目经历 -->
+    <div class="section-title"><div class="bar"></div><h2>项目经历</h2></div>
+
+    <!-- 项目1：营销Agent -->
+    <div class="proj-block">
+      <div class="proj-name">本地生活营销活动Agent化系统（"小促Agent"）</div>
+      <div class="proj-meta">
+        <b>项目技术：</b>Spring AI、Agent Harness、Java、Redis、Checkpoint机制、OTEL可观测、Kafka+ClickHouse、KIM卡片交互<br>
+        <b>角色：</b>Agent技术方案设计与资损风控/可观测体系核心参与人
+      </div>
+      <div class="proj-module">
+        <div class="proj-module-item">
+          <span class="mtitle">主导Agent整体技术方案选型与架构设计</span>
+          <div class="bg"><b class="label">背景：</b>面向本地生活营销活动"定/招/投/控/盘"全链路AI化，对比纯提示词驱动、低代码编排引擎、LangGraph、自研框架等5种方案，综合Java生态兼容性、HITL支持能力、团队落地成本，最终选定基于Spring AI自建Agent Harness，按入口层/智能决策层/行动层/治理层四层拆分能力边界；单场活动人工操作耗时从22步/126.3小时压缩至分钟级对话。</div>
+          <div class="tech"><b class="label">相关技术：</b>Spring AI、单体Agent+工具化子能力架构、意图识别与上下文管理</div>
+        </div>
+        <div class="proj-module-item">
+          <span class="mtitle">主导解决大模型Agent上下文膨胀导致的推理漂移问题</span>
+          <div class="bg"><b class="label">背景：</b>大工具场景下历史会话消息占上下文最高达89.1%，引发工具执行幻觉、历史细节遗忘等问题。设计工具结果"精简+外部化"双层卸载机制（完整结果存入BlobStore，上下文仅保留摘要与引用ID，按需通过fetchBlob回取），并推动架构由单Agent升级为主子Agent拆分，按业务域隔离上下文与Checkpoint，将单次工具结果上下文占用由3k token压缩至200 token内。</div>
+          <div class="tech"><b class="label">相关技术：</b>BlobStore外部化存储、Hook拦截、主子Agent架构、Checkpoint隔离</div>
+        </div>
+        <div class="proj-module-item">
+          <span class="mtitle">设计高危写操作全链路资损防控体系</span>
+          <div class="bg"><b class="label">背景：</b>Agent具备活动创建、发券、改库存等高危写能力，存在跨系统越权、关键参数误写、脏数据重复落库三类资损风险。建立"权限拦截+预演执行+数据兜底"三层防护：Skill/Tool双层权限校验、基于Agent中断机制实现"预演确认-恢复执行"的HITL交互（中断现场写Redis、生成interruptId绑定KIM确认卡片、读后即删防重复创建、用户会话级CacheLock防状态错乱）、字段级与行级幂等校验兜底。</div>
+          <div class="tech"><b class="label">相关技术：</b>Agent中断与Checkpoint恢复、Redis、KIM卡片交互、幂等设计</div>
+        </div>
+        <div class="proj-module-item">
+          <span class="mtitle">设计Agent链路可观测与语义故障诊断方案</span>
+          <div class="bg"><b class="label">背景：</b>传统Trace只能感知工具调用成功/失败，无法识别"Trace全绿但业务执行偏差"的语义故障。基于OTEL规范自定义Span协议采集全链路事件（Kafka→ETL→ClickHouse），建模意图流/控制流/数据流/结果流四种观测视角，通过内部四流交叉对账与外部系统下游对账，定位意图漂移、路径错乱、参数漂移、终态不一致四类语义故障。</div>
+          <div class="tech"><b class="label">相关技术：</b>OTEL、ClickHouse、Kafka、四流建模与双层对账</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 项目2：审核治理 -->
+    <div class="proj-block">
+      <div class="proj-name">审核治理大模型优化与多媒体内容理解中台</div>
+      <div class="proj-meta">
+        <b>项目技术：</b>Qwen3.5-Plus多模态SFT/DPO、大模型标注工程、RPC、kconf、ClickHouse、责任链模式<br>
+        <b>角色：</b>审核模型训练方案负责人 &amp; 多媒体内容理解中台主导设计人
+      </div>
+      <div class="proj-module">
+        <div class="proj-module-item">
+          <span class="mtitle">主导医疗广告审核大模型SFT训练，降低线上误杀率</span>
+          <div class="bg"><b class="label">背景：</b>线上审核长期依赖超长提示词硬编码规则，"沾边即判有责"导致误杀率接近99%。设计"800条有责+300条边界无责难例"的数据配比方案，采用Qwen3.5-Plus做思维链SFT微调（而非MLP分类头方案，保留推理链输出与图文细粒度对齐能力），配合"模型预生成+人工审核修正"的标注提效方式控制标注成本，SFT后以DPO偏好优化收尾边界case，训练后推理提示词可精简至一两句话。</div>
+          <div class="tech"><b class="label">相关技术：</b>Qwen3.5-Plus、SFT/DPO、多模态大模型、标注规范设计</div>
+        </div>
+        <div class="proj-module-item">
+          <span class="mtitle">主导私单检测文本审核模型训练数据体系建设</span>
+          <div class="bg"><b class="label">背景：</b>商家/主播文案、用户名、快手号中存在引导加微信等私单引流行为，规则穷举式判责难以维护且误判率高。构建userText/userName/kuaishouId三字段独立判责规则体系与"整体优先原则"（防止误拆分导致的系统性误判），设计SFT/CoT强化/DPO三阶段训练数据，输出含8步格式推理链的15字段结构化判责结果。</div>
+          <div class="tech"><b class="label">相关技术：</b>文本审核规则引擎、SFT/CoT/DPO、结构化推理输出</div>
+        </div>
+        <div class="proj-module-item">
+          <span class="mtitle">主导设计并推动"多媒体内容理解中台"统一架构</span>
+          <div class="bg"><b class="label">背景：</b>OCR/ASR、抽帧、转码等多媒体能力分散在多个审核项目中重复接入，缓存覆盖冲突、监控缺失，且存在同一视频/商品反复进入不同审核队列重复送审的问题。设计"原子能力路由"（新增能力仅需新增Handler实现类，client包与proto协议零改动）与"数据源可插拔Provider责任链"（ClickHouse历史库优先查询、下游接口兜底，kconf配置优先级实现灰度切换），并推动按队列级别的统一打点监控体系建设。</div>
+          <div class="tech"><b class="label">相关技术：</b>责任链模式、kconf动态配置、ClickHouse、RPC能力中台化</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 项目3：AIGC自媒体 -->
+    <div class="proj-block">
+      <div class="proj-name">AIGC短视频自媒体矩阵运营项目</div>
+      <div class="proj-meta">
+        <b>项目技术：</b>即梦（文生/图生视频）、GPT、Prompt工程、自动化Skill编排<br>
+        <b>角色：</b>账号运营与内容生产自动化链路搭建者
+      </div>
+      <div class="proj-module">
+        <div class="proj-module-item">
+          <span class="mtitle">搭建"剧本-脚本-提示词"AIGC内容生产自动化链路</span>
+          <div class="bg"><b class="label">背景：</b>响应组内"自己运营账号、反哺业务理解"的号召，将选题、脚本创作、分镜提示词生成、素材出片、人工审核发布等环节工具化、流程化，减少重复人力投入；账号从0运营至全网10万+粉丝。</div>
+          <div class="tech"><b class="label">相关技术：</b>即梦、GPT提示词模板化、skill自动化编排、ainative自动化链路</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 项目4：京东（原文保留） -->
+    <div class="proj-block">
+      <div class="proj-name">京东物流快递开放平台系统</div>
+      <div class="proj-meta">
+        <b>项目技术：</b>Spring、RPC、Mysql、分库分表、Redis、MQ、设计模式、es<br>
+        <b>角色：</b>京东物流快递系统的后端主研发
+      </div>
+      <div class="proj-module">
+        <div class="proj-module-item">
+          <span class="mtitle">主导快递接单系统的设计、开发与优化工作</span>
+          <div class="bg"><b class="label">背景：</b>将接单系统模块化、分批异步化处理，将物流接单接口的tp99的性能从800ms降低到200ms内；解决JVM初始化死锁问题，处理组内外多个系统相同问题，发表多篇技术文章，获得京东最佳技术分享个人奖；优化数据库死锁、CPU飙升问题，解决组内相同问题</div>
+          <div class="tech"><b class="label">相关技术：</b>MQ、JVM、RPC异步、Spring、Mysql、设计模式</div>
+        </div>
+        <div class="proj-module-item">
+          <span class="mtitle">主导设计系统（接单框架模块）整体监控开发及优化</span>
+          <div class="bg"><b class="label">背景：</b>接单框架采用大量的异步通道MQ去削峰履约，其中某个环节出现业务或者系统问题。采用RPC拦截器打点，监控每种接单任务性能表现、核心链路、非核心链路等因素进行路由规则优化，做到避免风险，有风险及时切换通道，瞬时修复。</div>
+          <div class="tech"><b class="label">相关技术：</b>RPC拦截器、Redis、MQ、RPC、Spring、Mysql、设计模式</div>
+        </div>
+        <div class="proj-module-item">
+          <span class="mtitle">主导物流快递订单系统的重构与对接</span>
+          <div class="bg"><b class="label">背景：</b>物流快递接单业务对接的的上游系统较多，包含上千个商家的商家系统、内部零售商城系统、抖音快手等电商平台，并通过多渠道对外承接，导致物流内部相同接单业务接口日益繁多，因此做出重构系统，用于承接所有商家的快递下单诉求</div>
+          <div class="tech"><b class="label">相关技术：</b>责任链设计模式、分层架构设计模式、RPC异步化、动态配置</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 技能/证书及其他 -->
+    <div class="section-title"><div class="bar"></div><h2>技能/证书及其他</h2></div>
+    <div class="other-item"><b class="label">荣誉奖项：</b>2023京东技术分享最佳个人、2023京东年度最佳优秀员工、2026年3月快手内部晋升</div>
+    <div class="other-item"><b class="label">兴趣爱好：</b>技术分享、户外徒步</div>
+    <div class="other-item"><b class="label">语言：</b>英语：CET-4（能熟练阅读英文技术文档）</div>
+
+  </div><!-- /body -->
+</div><!-- /resume -->
+</body>
+</html>
