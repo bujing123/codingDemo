@@ -26,20 +26,20 @@
 
   /* ===== 顶部（浅色，不用深色块） ===== */
   .header {
-    padding: 30px 36px 14px;
+    padding: 16px 36px 8px;
   }
 
   .header .name {
-    font-size: 27px;
+    font-size: 23px;
     font-weight: 700;
-    letter-spacing: 8px;
+    letter-spacing: 6px;
     color: #1a1a1a;
     text-align: center;
   }
 
   .header .meta-line {
-    margin-top: 12px;
-    font-size: 13px;
+    margin-top: 7px;
+    font-size: 12px;
     color: #555;
     text-align: center;
   }
@@ -47,8 +47,8 @@
   .header .meta-line .sep { margin: 0 10px; color: #bbb; }
 
   .header .status-line {
-    margin-top: 6px;
-    font-size: 13px;
+    margin-top: 3px;
+    font-size: 12px;
     color: #3d72b8;
     font-weight: 600;
     text-align: center;
@@ -57,32 +57,32 @@
   .header .status-line .sep { margin: 0 10px; color: #b7cdea; }
 
   /* ===== 正文 ===== */
-  .body { padding: 6px 36px 28px; }
+  .body { padding: 0 32px 10px; }
 
   /* ===== 章节标题：浅蓝底通栏 + 左侧色条，贴近原版风格 ===== */
   .section-title {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 20px 0 10px;
-    padding: 7px 12px;
+    gap: 8px;
+    margin: 9px 0 5px;
+    padding: 3px 10px;
     background: #eaf1fb;
     border-radius: 3px;
   }
 
   .section-title .bar {
-    width: 5px;
-    height: 16px;
+    width: 4px;
+    height: 13px;
     background: #3d72b8;
     border-radius: 2px;
     flex-shrink: 0;
   }
 
   .section-title h2 {
-    font-size: 15px;
+    font-size: 13.5px;
     font-weight: 700;
     color: #1f3a5c;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
   }
 
   /* ===== 教育经历 ===== */
@@ -90,13 +90,13 @@
     display: flex;
     align-items: baseline;
     gap: 14px;
-    font-size: 13.5px;
+    font-size: 12.5px;
   }
 
   .edu-row .school { font-weight: 700; color: #222; }
   .edu-row .tags { display: inline-flex; gap: 6px; }
   .edu-row .tag {
-    font-size: 11px;
+    font-size: 10.5px;
     color: #3d72b8;
     background: #eaf1fb;
     border: 1px solid #c3d8f2;
@@ -106,28 +106,28 @@
   .edu-row .date { margin-left: auto; color: #888; flex-shrink: 0; }
 
   .edu-sub {
-    font-size: 13px;
+    font-size: 12px;
     color: #555;
-    margin-top: 3px;
+    margin-top: 1px;
     display: flex;
     justify-content: space-between;
   }
 
   .course {
-    font-size: 12.5px;
+    font-size: 11.5px;
     color: #888;
-    margin-top: 5px;
+    margin-top: 2px;
   }
 
   /* ===== 专业技能（统一编号，不再区分新旧） ===== */
   .skill-list { list-style: none; counter-reset: skill; }
   .skill-list li {
-    font-size: 13px;
+    font-size: 11.8px;
     color: #444;
-    line-height: 1.75;
-    padding-left: 20px;
+    line-height: 1.38;
+    padding-left: 18px;
     position: relative;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
   }
   .skill-list li::before {
     content: counter(skill) '、';
@@ -143,45 +143,47 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-size: 13.5px;
-    margin-bottom: 2px;
+    font-size: 12.5px;
+    margin-bottom: 0;
   }
-  .job-row .company { font-weight: 700; color: #222; font-size: 14px; }
-  .job-row .dept { color: #666; margin-left: 10px; font-size: 12.5px; }
+  .job-row .company { font-weight: 700; color: #222; font-size: 13px; }
+  .job-row .dept { color: #666; margin-left: 10px; font-size: 11.5px; }
   .job-row .date { color: #888; }
-  .job-loc { font-size: 12px; color: #999; margin-bottom: 8px; }
+  .job-loc { font-size: 11px; color: #999; margin-bottom: 3px; }
 
   /* ===== 项目经历 ===== */
-  .proj-block { margin-bottom: 16px; }
+  .proj-block { margin-bottom: 5px; }
 
   .proj-name {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: #1f3a5c;
     background: #eaf1fb;
     border-left: 3px solid #3d72b8;
-    padding: 6px 10px;
+    padding: 3px 9px;
     border-radius: 0 3px 3px 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    page-break-after: avoid;
   }
 
   .proj-meta {
-    font-size: 12.5px;
+    font-size: 11.5px;
     color: #555;
-    line-height: 1.9;
+    line-height: 1.35;
     padding-left: 2px;
   }
   .proj-meta b { color: #333; font-weight: 700; }
 
   .proj-module {
-    margin-top: 4px;
+    margin-top: 1px;
     counter-reset: module;
   }
   .proj-module-item {
-    font-size: 13px;
+    font-size: 12px;
     color: #333;
-    margin-top: 8px;
+    margin-top: 3px;
     padding-left: 2px;
+    page-break-inside: avoid;
   }
   .proj-module-item .mtitle {
     font-weight: 700;
@@ -193,27 +195,27 @@
     color: #3d72b8;
   }
   .proj-module-item .bg {
-    font-size: 12.5px;
+    font-size: 11.5px;
     color: #555;
-    line-height: 1.75;
-    margin-top: 2px;
+    line-height: 1.38;
+    margin-top: 0;
   }
   .proj-module-item .bg b.label { color: #3d72b8; font-weight: 700; }
   .proj-module-item .tech {
-    font-size: 12.5px;
+    font-size: 11.5px;
     color: #555;
-    margin-top: 2px;
+    margin-top: 0;
   }
   .proj-module-item .tech b.label { color: #3d72b8; font-weight: 700; }
 
   /* ===== 技能证书及其他 ===== */
-  .other-item { font-size: 13px; color: #444; line-height: 1.9; margin-bottom: 2px; }
+  .other-item { font-size: 12px; color: #444; line-height: 1.4; margin-bottom: 0; }
   .other-item b.label { color: #1f3a5c; font-weight: 700; margin-right: 4px; }
 
   @media print {
     body { background: #fff; padding: 0; }
     .resume { box-shadow: none; width: 100%; }
-    .proj-block { page-break-inside: avoid; }
+    @page { margin: 8mm 10mm; }
   }
 </style>
 </head>
