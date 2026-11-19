@@ -26,11 +26,11 @@
 
   /* ===== 顶部（浅色，不用深色块） ===== */
   .header {
-    padding: 20px 36px 10px;
+    padding: 14px 36px 6px;
   }
 
   .header .name {
-    font-size: 25px;
+    font-size: 26px;
     font-weight: 700;
     letter-spacing: 7px;
     color: #1a1a1a;
@@ -38,8 +38,8 @@
   }
 
   .header .meta-line {
-    margin-top: 9px;
-    font-size: 12.5px;
+    margin-top: 10px;
+    font-size: 13px;
     color: #222;
     text-align: center;
   }
@@ -47,8 +47,8 @@
   .header .meta-line .sep { margin: 0 10px; color: #bbb; }
 
   .header .status-line {
-    margin-top: 4px;
-    font-size: 12.5px;
+    margin-top: 5px;
+    font-size: 13px;
     color: #3d72b8;
     font-weight: 600;
     text-align: center;
@@ -57,14 +57,14 @@
   .header .status-line .sep { margin: 0 10px; color: #b7cdea; }
 
   /* ===== 正文 ===== */
-  .body { padding: 2px 32px 14px; }
+  .body { padding: 0 32px 10px; }
 
   /* ===== 章节标题：浅蓝底通栏 + 左侧色条，贴近原版风格 ===== */
   .section-title {
     display: flex;
     align-items: center;
     gap: 9px;
-    margin: 13px 0 7px;
+    margin: 10px 0 6px;
     padding: 4px 11px;
     background: #eaf1fb;
     border-radius: 3px;
@@ -72,14 +72,14 @@
 
   .section-title .bar {
     width: 4px;
-    height: 13px;
+    height: 14px;
     background: #3d72b8;
     border-radius: 2px;
     flex-shrink: 0;
   }
 
   .section-title h2 {
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 700;
     color: #1f3a5c;
     letter-spacing: 1.5px;
@@ -90,13 +90,13 @@
     display: flex;
     align-items: baseline;
     gap: 14px;
-    font-size: 12.5px;
+    font-size: 13px;
   }
 
   .edu-row .school { font-weight: 700; color: #222; }
   .edu-row .tags { display: inline-flex; gap: 6px; }
   .edu-row .tag {
-    font-size: 10.5px;
+    font-size: 11px;
     color: #3d72b8;
     background: #eaf1fb;
     border: 1px solid #c3d8f2;
@@ -106,9 +106,9 @@
   .edu-row .date { margin-left: auto; color: #222; flex-shrink: 0; }
 
   .edu-sub {
-    font-size: 12px;
+    font-size: 12.5px;
     color: #222;
-    margin-top: 1px;
+    margin-top: 2px;
     display: flex;
     justify-content: space-between;
   }
@@ -122,12 +122,12 @@
   /* ===== 专业技能（统一编号，不再区分新旧） ===== */
   .skill-list { list-style: none; counter-reset: skill; }
   .skill-list li {
-    font-size: 12.2px;
+    font-size: 13px;
     color: #1a1a1a;
-    line-height: 1.48;
+    line-height: 1.6;
     padding-left: 18px;
     position: relative;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
   }
   .skill-list li::before {
     content: counter(skill) '、';
@@ -143,19 +143,19 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-size: 13px;
+    font-size: 13.5px;
     margin-bottom: 0;
   }
-  .job-row .company { font-weight: 700; color: #222; font-size: 13.5px; }
-  .job-row .dept { color: #333; margin-left: 10px; font-size: 12px; }
+  .job-row .company { font-weight: 700; color: #222; font-size: 14px; }
+  .job-row .dept { color: #333; margin-left: 10px; font-size: 12.5px; }
   .job-row .date { color: #222; }
-  .job-loc { font-size: 11.5px; color: #444; margin-bottom: 5px; }
+  .job-loc { font-size: 12px; color: #444; margin-bottom: 6px; }
 
   /* ===== 项目经历 ===== */
-  .proj-block { margin-bottom: 7px; }
+  .proj-block { margin-bottom: 8px; }
 
   .proj-name {
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 700;
     color: #1f3a5c;
     background: #eaf1fb;
@@ -167,21 +167,21 @@
   }
 
   .proj-meta {
-    font-size: 12px;
+    font-size: 12.5px;
     color: #1a1a1a;
-    line-height: 1.5;
+    line-height: 1.6;
     padding-left: 2px;
   }
   .proj-meta b { color: #1a1a1a; font-weight: 700; }
 
   .proj-module {
-    margin-top: 2px;
+    margin-top: 3px;
     counter-reset: module;
   }
   .proj-module-item {
-    font-size: 12.3px;
+    font-size: 13px;
     color: #1a1a1a;
-    margin-top: 5px;
+    margin-top: 6px;
     padding-left: 2px;
     page-break-inside: avoid;
   }
@@ -195,21 +195,21 @@
     color: #3d72b8;
   }
   .proj-module-item .bg {
-    font-size: 11.8px;
+    font-size: 12.5px;
     color: #1a1a1a;
-    line-height: 1.48;
-    margin-top: 1px;
+    line-height: 1.6;
+    margin-top: 2px;
   }
   .proj-module-item .bg b.label { color: #3d72b8; font-weight: 700; }
   .proj-module-item .tech {
-    font-size: 11.8px;
+    font-size: 12.5px;
     color: #333;
-    margin-top: 0;
+    margin-top: 1px;
   }
   .proj-module-item .tech b.label { color: #3d72b8; font-weight: 700; }
 
   /* ===== 技能证书及其他 ===== */
-  .other-item { font-size: 12.3px; color: #1a1a1a; line-height: 1.6; margin-bottom: 2px; }
+  .other-item { font-size: 13px; color: #1a1a1a; line-height: 1.7; margin-bottom: 3px; }
   .other-item b.label { color: #1f3a5c; font-weight: 700; margin-right: 4px; }
 
   @media print {
@@ -252,7 +252,7 @@
       <li>工程框架与架构设计：熟悉Spring/SpringMVC/SpringBoot/Mybatis等Java开发技术栈，熟悉MQ消息中间件（解耦、异步增效、流量削峰），灵活运用工厂、模板方法、策略、责任链等设计模式解决实际业务问题；</li>
       <li>熟悉基于Spring AI构建Agent工程化能力，包括Agent Harness分层设计（入口层/智能决策层/行动层/治理层）、大工具结果"精简+外部化"双层上下文卸载、主子Agent拆分与上下文隔离、基于中断恢复机制的人工介入（HITL）等；</li>
       <li>熟悉大模型SFT/CoT/DPO训练全流程，具备训练数据配比设计、标注规范制定、"模型预生成+人工审核修正"降本标注方案、模型选型论证（SFT微调 vs MLP分类头）等审核类多模态/文本大模型调优经验；</li>
-      <li>熟悉多媒体内容理解相关工程能力，针对OCR/ASR等结果存在多来源（ClickHouse历史库、下游全量接口、媒资平台等）的场景，设计责任链模式的数据获取策略抽象（Provider Chain，按优先级路由到不同来源，非识别算法本身），配合抽帧策略by队列路由、kconf动态配置灰度等；</li>
+      <li>熟悉多媒体内容理解相关工程能力，针对OCR/ASR等结果存在多来源（历史库、下游全量接口、媒资平台等）的场景，设计责任链模式的数据获取策略抽象（按优先级路由到不同来源，非识别算法本身），配合抽帧策略按队列路由、动态配置中心灰度等；</li>
       <li>熟悉多模型API编排与Prompt工程化，具备将生成式AI能力（文本大模型、视觉生成模型）封装为可组合调用的Skill单元、搭建自动化内容生产链路的实践经验。</li>
     </ol>
 
@@ -270,9 +270,9 @@
 
     <!-- 项目1：营销Agent -->
     <div class="proj-block">
-      <div class="proj-name">本地生活营销活动Agent化系统（"小促Agent"）</div>
+      <div class="proj-name">本地生活营销活动Agent化系统</div>
       <div class="proj-meta">
-        <b>项目技术：</b>Spring AI、Agent Harness、Java、Redis、Checkpoint机制、OTEL可观测、Kafka+ClickHouse、KIM卡片交互<br>
+        <b>项目技术：</b>Spring AI、Agent Harness、Java、Redis、Checkpoint机制、OTEL可观测、Kafka+ClickHouse、消息卡片交互<br>
         <b>角色：</b>Agent技术方案设计与资损风控/可观测体系核心参与人
       </div>
       <div class="proj-module">
@@ -283,13 +283,13 @@
         </div>
         <div class="proj-module-item">
           <span class="mtitle">主导解决大模型Agent上下文膨胀导致的推理漂移问题</span>
-          <div class="bg"><b class="label">背景：</b>大工具场景下历史会话消息占上下文最高达89.1%，引发工具执行幻觉、历史细节遗忘等问题。设计工具结果"精简+外部化"双层卸载机制（完整结果存入BlobStore，上下文仅保留摘要与引用ID，按需通过fetchBlob回取），并推动架构由单Agent升级为主子Agent拆分，按业务域隔离上下文与Checkpoint，将单次工具结果上下文占用由3k token压缩至200 token内。</div>
-          <div class="tech"><b class="label">相关技术：</b>BlobStore外部化存储、Hook拦截、主子Agent架构、Checkpoint隔离</div>
+          <div class="bg"><b class="label">背景：</b>大工具场景下历史会话消息占上下文最高达89.1%，引发工具执行幻觉、历史细节遗忘等问题。设计工具结果"精简+外部化"双层卸载机制，并推动架构由单Agent升级为主子Agent拆分，按业务域隔离上下文与Checkpoint，将单次工具结果上下文占用由3k token压缩至200 token内。</div>
+          <div class="tech"><b class="label">相关技术：</b>外部化存储、主子Agent架构、Checkpoint隔离</div>
         </div>
         <div class="proj-module-item">
           <span class="mtitle">设计高危写操作全链路资损防控体系</span>
-          <div class="bg"><b class="label">背景：</b>Agent具备活动创建、发券、改库存等高危写能力，存在跨系统越权、关键参数误写、脏数据重复落库三类资损风险。建立"工具授权+预演模式+数据兜底"三层防护：Skill/Tool双层权限校验、基于Agent中断机制与Checkpoint快照实现"预演确认-恢复执行"的HITL交互（中断现场写Redis Hash生成interruptId绑定KIM确认卡片、读后即删防重复创建、用户会话级CacheLock防状态错乱）、字段级与行级幂等校验兜底。</div>
-          <div class="tech"><b class="label">相关技术：</b>Agent中断与Checkpoint恢复、Redis、KIM卡片交互、幂等设计</div>
+          <div class="bg"><b class="label">背景：</b>Agent具备活动创建、发券、改库存等高危写能力，存在跨系统越权、关键参数误写、脏数据重复落库三类资损风险。建立"工具授权+预演模式+数据兜底"三层防护：Skill/Tool双层权限校验、基于Agent中断机制与Checkpoint快照实现"预演确认-恢复执行"的HITL交互、字段级与行级幂等校验兜底。</div>
+          <div class="tech"><b class="label">相关技术：</b>Agent中断与Checkpoint恢复、Redis、幂等设计</div>
         </div>
       </div>
     </div>
@@ -298,24 +298,24 @@
     <div class="proj-block">
       <div class="proj-name">审核治理大模型优化与多媒体内容理解中台</div>
       <div class="proj-meta">
-        <b>项目技术：</b>Qwen3.5-Plus多模态SFT/DPO、大模型标注工程、RPC、kconf、ClickHouse、责任链模式<br>
+        <b>项目技术：</b>Qwen3.5-Plus多模态SFT/DPO、大模型标注工程、RPC、动态配置中心、ClickHouse、责任链模式<br>
         <b>角色：</b>审核模型训练方案负责人 &amp; 多媒体内容理解中台主导设计人
       </div>
       <div class="proj-module">
         <div class="proj-module-item">
           <span class="mtitle">主导医疗广告审核大模型SFT训练，降低线上误杀率</span>
-          <div class="bg"><b class="label">背景：</b>线上审核长期依赖超长提示词硬编码规则，"沾边即判有责"导致误杀率接近99%。设计"800条有责+300条边界无责难例"的数据配比方案，采用Qwen3.5-Plus做思维链SFT微调（而非MLP分类头方案，保留推理链输出与图文细粒度对齐能力），配合"模型预生成+人工审核修正"的标注提效方式控制标注成本，SFT后以DPO偏好优化收尾边界case；训练后推理提示词可精简至一两句话，<b>短视频场景全由机器审核代替人工，准确率与召回率均达到98%+</b>。</div>
+          <div class="bg"><b class="label">背景：</b>线上审核长期依赖超长提示词硬编码规则，"沾边即判有责"导致误杀率接近99%，严重依赖人审复查。设计数据配比方案，采用Qwen3.5-Plus做思维链SFT微调，配合"模型预生成+人工审核修正"的标注提效方式控制标注成本，SFT后以DPO偏好优化收尾边界case；训练后推理提示词可精简至一两句话，<b>短视频场景全由机器审核代替人工，准确率与召回率均达到98%+</b>。</div>
           <div class="tech"><b class="label">相关技术：</b>Qwen3.5-Plus、SFT/DPO、多模态大模型、标注规范设计</div>
         </div>
         <div class="proj-module-item">
           <span class="mtitle">主导私单检测文本审核模型训练数据体系建设</span>
-          <div class="bg"><b class="label">背景：</b>商家/主播文案、用户名、快手号中存在引导加微信等私单引流行为，规则穷举式判责难以维护且误判率高。构建userText/userName/kuaishouId三字段独立判责规则体系与"整体优先原则"（防止误拆分导致的系统性误判），设计SFT/CoT强化/DPO三阶段训练数据，输出含8步格式推理链的15字段结构化判责结果。</div>
+          <div class="bg"><b class="label">背景：</b>商家/主播文案、用户名、账号信息中存在引导加微信等私单引流行为，规则穷举式判责难以维护且误判率高。构建多字段独立判责规则体系与"整体优先原则"（防止误拆分导致的系统性误判），设计SFT/CoT强化/DPO三阶段训练数据，输出含完整推理链的结构化判责结果。</div>
           <div class="tech"><b class="label">相关技术：</b>文本审核规则引擎、SFT/CoT/DPO、结构化推理输出</div>
         </div>
         <div class="proj-module-item">
           <span class="mtitle">主导设计并推动"多媒体内容理解中台"统一架构</span>
-          <div class="bg"><b class="label">背景：</b>OCR/ASR、抽帧、转码等多媒体能力分散在多个审核项目中重复接入，缓存覆盖冲突、监控缺失，且存在同一视频/商品反复进入不同审核队列重复送审的问题。设计"原子能力路由"（新增能力仅需新增Handler实现类，client包与proto协议零改动）与"数据源可插拔Provider责任链"（ClickHouse历史库优先查询、下游接口兜底，kconf配置优先级实现灰度切换），并推动按队列级别的统一打点监控体系建设。</div>
-          <div class="tech"><b class="label">相关技术：</b>责任链模式、kconf动态配置、ClickHouse、RPC能力中台化</div>
+          <div class="bg"><b class="label">背景：</b>OCR/ASR、抽帧、转码等多媒体能力分散在多个审核项目中重复接入，缓存覆盖冲突、监控缺失，且存在同一视频/商品反复进入不同审核队列重复送审的问题。设计"原子能力路由"与"数据源可插拔Provider责任链"，并推动按队列级别的统一打点监控体系建设。</div>
+          <div class="tech"><b class="label">相关技术：</b>责任链模式、动态配置中心、ClickHouse、RPC能力中台化</div>
         </div>
       </div>
     </div>
