@@ -26,20 +26,20 @@
 
   /* ===== 顶部（浅色，不用深色块） ===== */
   .header {
-    padding: 16px 36px 8px;
+    padding: 20px 36px 10px;
   }
 
   .header .name {
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 700;
-    letter-spacing: 6px;
+    letter-spacing: 7px;
     color: #1a1a1a;
     text-align: center;
   }
 
   .header .meta-line {
-    margin-top: 7px;
-    font-size: 12px;
+    margin-top: 9px;
+    font-size: 12.5px;
     color: #555;
     text-align: center;
   }
@@ -47,8 +47,8 @@
   .header .meta-line .sep { margin: 0 10px; color: #bbb; }
 
   .header .status-line {
-    margin-top: 3px;
-    font-size: 12px;
+    margin-top: 4px;
+    font-size: 12.5px;
     color: #3d72b8;
     font-weight: 600;
     text-align: center;
@@ -57,15 +57,15 @@
   .header .status-line .sep { margin: 0 10px; color: #b7cdea; }
 
   /* ===== 正文 ===== */
-  .body { padding: 0 32px 10px; }
+  .body { padding: 2px 32px 14px; }
 
   /* ===== 章节标题：浅蓝底通栏 + 左侧色条，贴近原版风格 ===== */
   .section-title {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin: 9px 0 5px;
-    padding: 3px 10px;
+    gap: 9px;
+    margin: 13px 0 7px;
+    padding: 4px 11px;
     background: #eaf1fb;
     border-radius: 3px;
   }
@@ -122,12 +122,12 @@
   /* ===== 专业技能（统一编号，不再区分新旧） ===== */
   .skill-list { list-style: none; counter-reset: skill; }
   .skill-list li {
-    font-size: 11.8px;
+    font-size: 12.2px;
     color: #444;
-    line-height: 1.38;
+    line-height: 1.48;
     padding-left: 18px;
     position: relative;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
   }
   .skill-list li::before {
     content: counter(skill) '、';
@@ -143,45 +143,45 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-size: 12.5px;
+    font-size: 13px;
     margin-bottom: 0;
   }
-  .job-row .company { font-weight: 700; color: #222; font-size: 13px; }
-  .job-row .dept { color: #666; margin-left: 10px; font-size: 11.5px; }
+  .job-row .company { font-weight: 700; color: #222; font-size: 13.5px; }
+  .job-row .dept { color: #666; margin-left: 10px; font-size: 12px; }
   .job-row .date { color: #888; }
-  .job-loc { font-size: 11px; color: #999; margin-bottom: 3px; }
+  .job-loc { font-size: 11.5px; color: #999; margin-bottom: 5px; }
 
   /* ===== 项目经历 ===== */
-  .proj-block { margin-bottom: 5px; }
+  .proj-block { margin-bottom: 7px; }
 
   .proj-name {
-    font-size: 13px;
+    font-size: 13.5px;
     font-weight: 700;
     color: #1f3a5c;
     background: #eaf1fb;
     border-left: 3px solid #3d72b8;
-    padding: 3px 9px;
+    padding: 4px 10px;
     border-radius: 0 3px 3px 0;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
     page-break-after: avoid;
   }
 
   .proj-meta {
-    font-size: 11.5px;
+    font-size: 12px;
     color: #555;
-    line-height: 1.35;
+    line-height: 1.5;
     padding-left: 2px;
   }
   .proj-meta b { color: #333; font-weight: 700; }
 
   .proj-module {
-    margin-top: 1px;
+    margin-top: 2px;
     counter-reset: module;
   }
   .proj-module-item {
-    font-size: 12px;
+    font-size: 12.3px;
     color: #333;
-    margin-top: 3px;
+    margin-top: 5px;
     padding-left: 2px;
     page-break-inside: avoid;
   }
@@ -195,21 +195,21 @@
     color: #3d72b8;
   }
   .proj-module-item .bg {
-    font-size: 11.5px;
+    font-size: 11.8px;
     color: #555;
-    line-height: 1.38;
-    margin-top: 0;
+    line-height: 1.48;
+    margin-top: 1px;
   }
   .proj-module-item .bg b.label { color: #3d72b8; font-weight: 700; }
   .proj-module-item .tech {
-    font-size: 11.5px;
+    font-size: 11.8px;
     color: #555;
     margin-top: 0;
   }
   .proj-module-item .tech b.label { color: #3d72b8; font-weight: 700; }
 
   /* ===== 技能证书及其他 ===== */
-  .other-item { font-size: 12px; color: #444; line-height: 1.4; margin-bottom: 0; }
+  .other-item { font-size: 12.3px; color: #444; line-height: 1.6; margin-bottom: 2px; }
   .other-item b.label { color: #1f3a5c; font-weight: 700; margin-right: 4px; }
 
   @media print {
@@ -277,9 +277,9 @@
       </div>
       <div class="proj-module">
         <div class="proj-module-item">
-          <span class="mtitle">主导Agent整体技术方案选型与架构设计</span>
-          <div class="bg"><b class="label">背景：</b>面向本地生活营销活动"定/招/投/控/盘"全链路AI化，对比纯提示词驱动、低代码编排引擎、LangGraph、自研框架等5种方案，综合Java生态兼容性、HITL支持能力、团队落地成本，最终选定基于Spring AI自建Agent Harness，按入口层/智能决策层/行动层/治理层四层拆分能力边界；单场活动操作步长从6步压缩至最低2步、操作时长从27小时压缩至10分钟，AI召回率98.19%、AI准确率82.21%。</div>
-          <div class="tech"><b class="label">相关技术：</b>Spring AI、单体Agent+工具化子能力架构、意图识别与上下文管理</div>
+          <span class="mtitle">主导Agent技术方案选型与链路可观测体系设计</span>
+          <div class="bg"><b class="label">背景：</b>对比5种技术方案后，选定基于Spring AI自建Agent Harness四层架构；并基于OTEL自定义Span协议建模意图流/控制流/数据流/结果流四流对账，解决"Trace全绿但业务执行偏差"的语义故障盲区。单场活动操作步长从6步压缩至最低2步、时长从27小时压缩至10分钟，AI召回率98.19%、准确率82.21%。</div>
+          <div class="tech"><b class="label">相关技术：</b>Spring AI、Agent Harness、OTEL、四流建模与对账</div>
         </div>
         <div class="proj-module-item">
           <span class="mtitle">主导解决大模型Agent上下文膨胀导致的推理漂移问题</span>
@@ -290,11 +290,6 @@
           <span class="mtitle">设计高危写操作全链路资损防控体系</span>
           <div class="bg"><b class="label">背景：</b>Agent具备活动创建、发券、改库存等高危写能力，存在跨系统越权、关键参数误写、脏数据重复落库三类资损风险。建立"工具授权+预演模式+数据兜底"三层防护：Skill/Tool双层权限校验、基于Agent中断机制与Checkpoint快照实现"预演确认-恢复执行"的HITL交互（中断现场写Redis Hash生成interruptId绑定KIM确认卡片、读后即删防重复创建、用户会话级CacheLock防状态错乱）、字段级与行级幂等校验兜底。</div>
           <div class="tech"><b class="label">相关技术：</b>Agent中断与Checkpoint恢复、Redis、KIM卡片交互、幂等设计</div>
-        </div>
-        <div class="proj-module-item">
-          <span class="mtitle">设计Agent链路可观测与语义故障诊断方案</span>
-          <div class="bg"><b class="label">背景：</b>传统Trace只能感知工具调用成功/失败，无法识别"Trace全绿但业务执行偏差"的语义故障。基于OTEL规范自定义Span协议采集全链路事件（Kafka→ETL→ClickHouse），建模意图流/控制流/数据流/结果流四种观测视角，通过内部四流交叉对账与外部系统下游对账，定位意图漂移、路径错乱、参数漂移、终态不一致四类语义故障。</div>
-          <div class="tech"><b class="label">相关技术：</b>OTEL、ClickHouse、Kafka、四流建模与双层对账</div>
         </div>
       </div>
     </div>
@@ -335,13 +330,8 @@
       <div class="proj-module">
         <div class="proj-module-item">
           <span class="mtitle">设计多模态AI能力Skill化编排链路，实现内容生产全流程自动化</span>
-          <div class="bg"><b class="label">背景：</b>响应组内"自主验证AIGC技术可行性"的号召，针对内容创作需综合调用文本生成模型（GPT）与视觉生成模型（即梦）两类异构AI能力、人工逐步操作效率低的问题，将创作链路拆解为脚本生成、视觉提示词生成、素材生成等可独立调用、可组合的Skill单元，设计统一编排层串联多个Skill形成自动化执行链路替代人工操作；以单一账号运营验证该套工程方案，实现全网10万+粉丝增长。</div>
-          <div class="tech"><b class="label">相关技术：</b>多模型API编排、Skill化封装设计、自动化流程调度</div>
-        </div>
-        <div class="proj-module-item">
-          <span class="mtitle">建立Prompt模板化与参数化配置机制，提升AIGC内容生成稳定性</span>
-          <div class="bg"><b class="label">背景：</b>AI生成内容质量对Prompt措辞高度敏感，一次性手写Prompt难以规模化复用。针对剧本大纲、分镜脚本、视觉风格等环节分别设计结构化Prompt模板，通过持续调试迭代固化为可复用的参数化配置，使内容生产从"每次重新摸索"变为"模板驱动的稳定产出"，为自动化链路规模化复用提供基础。</div>
-          <div class="tech"><b class="label">相关技术：</b>Prompt工程化、参数化模板设计、迭代调优方法论</div>
+          <div class="bg"><b class="label">背景：</b>响应组内"自主验证AIGC技术可行性"的号召，将文本生成（GPT）与视觉生成（即梦）两类异构AI能力拆解为可独立调用、可组合的Skill单元，设计统一编排层串联形成自动化执行链路替代人工操作；配套设计结构化Prompt模板实现参数化配置、提升生成内容稳定性。以单一账号运营验证，实现全网10万+粉丝增长。</div>
+          <div class="tech"><b class="label">相关技术：</b>多模型API编排、Skill化封装设计、Prompt工程化</div>
         </div>
       </div>
     </div>
