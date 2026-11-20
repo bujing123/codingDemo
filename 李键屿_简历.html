@@ -137,6 +137,7 @@
     color: #3d72b8;
     font-weight: 700;
   }
+  .skill-list li b { color: #3d72b8; font-weight: 700; }
 
   /* ===== 工作经历 ===== */
   .job-row {
@@ -247,13 +248,10 @@
     <!-- 专业技能 -->
     <div class="section-title"><div class="bar"></div><h2>专业技能</h2></div>
     <ol class="skill-list">
-      <li>扎实的Java基础：熟悉JVM内存模型与回收机制，有多次调优经历；深入理解并发编程，熟练使用线程池、AQS、CountDownLatch、Future等；</li>
-      <li>数据存储与缓存：熟悉MySQL索引、事务、锁机制，有调优与分库分表设计经验；熟悉Redis多级缓存架构，熟悉穿透、击穿、雪崩、双写一致等问题的应对方案；</li>
-      <li>工程框架与架构设计：熟悉Spring/SpringMVC/SpringBoot/Mybatis等Java开发技术栈，熟悉MQ消息中间件（解耦、异步增效、流量削峰），灵活运用工厂、模板方法、策略、责任链等设计模式解决实际业务问题；</li>
-      <li>熟悉基于Spring AI构建Agent工程化能力，包括Agent Harness分层设计（入口层/智能决策层/行动层/治理层）、大工具结果"精简+外部化"双层上下文卸载、主子Agent拆分与上下文隔离、基于中断恢复机制的人工介入（HITL）等；</li>
-      <li>熟悉大模型SFT/CoT/DPO训练全流程，具备训练数据配比设计、标注规范制定、"模型预生成+人工审核修正"降本标注方案、模型选型论证（SFT微调 vs MLP分类头）等审核类多模态/文本大模型调优经验；</li>
-      <li>熟悉多媒体内容理解相关工程能力，针对OCR/ASR等结果存在多来源（历史库、下游全量接口、媒资平台等）的场景，设计责任链模式的数据获取策略抽象（按优先级路由到不同来源，非识别算法本身），配合抽帧策略按队列路由、动态配置中心灰度等；</li>
-      <li>熟悉多模型API编排与Prompt工程化，具备将生成式AI能力（文本大模型、视觉生成模型）封装为可组合调用的Skill单元、搭建自动化内容生产链路的实践经验。</li>
+      <li><b>Java工程基础：</b>JVM内存模型与回收机制调优，线程池、AQS、CountDownLatch、Future等并发编程；MySQL索引/事务/锁机制调优与分库分表设计，Redis多级缓存架构（穿透、击穿、雪崩、双写一致）；Spring/SpringMVC/SpringBoot/Mybatis技术栈，MQ消息中间件，工厂、模板方法、策略、责任链等设计模式；</li>
+      <li><b>AI Agent工程化：</b>基于Spring AI构建Agent Harness分层架构（入口层/智能决策层/行动层/治理层），主子Agent拆分与上下文隔离，大工具结果"精简+外部化"双层卸载，基于中断恢复机制的人工介入（HITL）；</li>
+      <li><b>大模型与内容理解：</b>大模型SFT/CoT/DPO训练全流程（数据配比设计、标注规范制定、"模型预生成+人工审核修正"降本方案、SFT微调 vs MLP分类头选型论证）；多媒体内容理解工程能力（OCR/ASR多来源数据获取策略抽象、抽帧策略按队列路由、动态配置中心灰度）；</li>
+      <li><b>AIGC内容生产：</b>多模型API编排与Prompt工程化，将生成式AI能力（文本大模型、视觉生成模型）封装为可组合调用的Skill单元，搭建自动化内容生产链路。</li>
     </ol>
 
     <!-- 工作经历 -->
@@ -278,12 +276,12 @@
       <div class="proj-module">
         <div class="proj-module-item">
           <span class="mtitle">主导Agent技术方案选型与链路可观测体系设计</span>
-          <div class="bg"><b class="label">背景：</b>对比5种技术方案后，选定基于Spring AI自建Agent Harness四层架构；并基于OTEL自定义Span协议建模意图流/控制流/数据流/结果流四流对账，解决"Trace全绿但业务执行偏差"的语义故障盲区。单场活动操作步长从6步压缩至最低2步、时长从27小时压缩至10分钟，AI召回率98.19%、准确率82.21%。</div>
+          <div class="bg"><b class="label">背景：</b>对比5种技术方案后，选定基于Spring AI自建Agent Harness四层架构；并基于OTEL自定义Span协议建模意图流/控制流/数据流/结果流四流对账，解决"Trace全绿但业务执行偏差"的语义故障盲区。<b>单场活动操作步长从6步压缩至最低2步、时长从27小时压缩至10分钟，AI召回率98.19%、准确率82.21%</b>。</div>
           <div class="tech"><b class="label">相关技术：</b>Spring AI、Agent Harness、OTEL、四流建模与对账</div>
         </div>
         <div class="proj-module-item">
           <span class="mtitle">主导解决大模型Agent上下文膨胀导致的推理漂移问题</span>
-          <div class="bg"><b class="label">背景：</b>大工具场景下历史会话消息占上下文最高达89.1%，引发工具执行幻觉、历史细节遗忘等问题。设计工具结果"精简+外部化"双层卸载机制，并推动架构由单Agent升级为主子Agent拆分，按业务域隔离上下文与Checkpoint，将单次工具结果上下文占用由3k token压缩至200 token内。</div>
+          <div class="bg"><b class="label">背景：</b>大工具场景下历史会话消息占上下文最高达89.1%，引发工具执行幻觉、历史细节遗忘等问题。设计工具结果"精简+外部化"双层卸载机制，并推动架构由单Agent升级为主子Agent拆分，按业务域隔离上下文与Checkpoint，<b>将单次工具结果上下文占用由3k token压缩至200 token内</b>。</div>
           <div class="tech"><b class="label">相关技术：</b>外部化存储、主子Agent架构、Checkpoint隔离</div>
         </div>
         <div class="proj-module-item">
@@ -330,7 +328,7 @@
       <div class="proj-module">
         <div class="proj-module-item">
           <span class="mtitle">设计多模态AI能力Skill化编排链路，实现内容生产全流程自动化</span>
-          <div class="bg"><b class="label">背景：</b>响应组内"自主验证AIGC技术可行性"的号召，将文本生成（GPT）与视觉生成（即梦）两类异构AI能力拆解为可独立调用、可组合的Skill单元，设计统一编排层串联形成自动化执行链路替代人工操作；配套设计结构化Prompt模板实现参数化配置、提升生成内容稳定性。以单一账号运营验证，实现全网10万+粉丝增长。</div>
+          <div class="bg"><b class="label">背景：</b>响应组内"自主验证AIGC技术可行性"的号召，将文本生成（GPT）与视觉生成（即梦）两类异构AI能力拆解为可独立调用、可组合的Skill单元，设计统一编排层串联形成自动化执行链路替代人工操作；配套设计结构化Prompt模板实现参数化配置、提升生成内容稳定性。<b>以单一账号运营验证，实现全网10万+粉丝增长</b>。</div>
           <div class="tech"><b class="label">相关技术：</b>多模型API编排、Skill化封装设计、Prompt工程化</div>
         </div>
       </div>
